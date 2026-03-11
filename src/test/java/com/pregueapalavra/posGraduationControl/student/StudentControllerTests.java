@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pregueapalavra.posGraduationControl.exception.exceptions.DatabaseException;
 import com.pregueapalavra.posGraduationControl.exception.exceptions.ResourceNotFoundException;
-import com.pregueapalavra.posGraduationControl.exception.student.EmailAlreadyExistsException;
+import com.pregueapalavra.posGraduationControl.exception.exceptions.student.EmailAlreadyExistsException;
 import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.dto.UpdateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.factory.CreateStudentTestFactory;

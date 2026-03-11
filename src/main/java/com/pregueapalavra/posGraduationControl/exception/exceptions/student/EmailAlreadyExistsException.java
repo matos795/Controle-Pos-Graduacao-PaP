@@ -1,4 +1,4 @@
-package com.pregueapalavra.posGraduationControl.exception.student;
+package com.pregueapalavra.posGraduationControl.exception.exceptions.student;
 
 public class EmailAlreadyExistsException extends RuntimeException {
 

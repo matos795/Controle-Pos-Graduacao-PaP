@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.pregueapalavra.posGraduationControl.exception.exceptions.DatabaseException;
 import com.pregueapalavra.posGraduationControl.exception.exceptions.ResourceNotFoundException;
+import com.pregueapalavra.posGraduationControl.exception.exceptions.student.EmailAlreadyExistsException;
+import com.pregueapalavra.posGraduationControl.exception.exceptions.subject.NameAlreadyExistsException;
 import com.pregueapalavra.posGraduationControl.exception.global.dto.ErrorResponse;
-import com.pregueapalavra.posGraduationControl.exception.student.EmailAlreadyExistsException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -52,6 +53,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(EmailAlreadyExistsException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
     public ErrorResponse handleEmailAlreadyExists(EmailAlreadyExistsException ex) {
+        return new ErrorResponse(LocalDateTime.now(), HttpStatus.CONFLICT.value(), ex.getMessage());
+    }
+
+    @ExceptionHandler(NameAlreadyExistsException.class)
+    @ResponseStatus(HttpStatus.CONFLICT)
+    public ErrorResponse handleNameAlreadyExists(NameAlreadyExistsException ex) {
         return new ErrorResponse(LocalDateTime.now(), HttpStatus.CONFLICT.value(), ex.getMessage());
     }
 }

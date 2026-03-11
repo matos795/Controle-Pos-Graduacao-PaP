@@ -26,7 +26,7 @@ import org.springframework.data.domain.PageRequest;
 
 import com.pregueapalavra.posGraduationControl.exception.exceptions.DatabaseException;
 import com.pregueapalavra.posGraduationControl.exception.exceptions.ResourceNotFoundException;
-import com.pregueapalavra.posGraduationControl.exception.student.EmailAlreadyExistsException;
+import com.pregueapalavra.posGraduationControl.exception.exceptions.student.EmailAlreadyExistsException;
 import com.pregueapalavra.posGraduationControl.student.dto.StudentResponse;
 import com.pregueapalavra.posGraduationControl.student.dto.UpdateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.factory.CreateStudentTestFactory;
