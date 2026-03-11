@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Email;
 
-public record CreateStudentRequestDTO (
+public record CreateStudentRequest (
 
     @NotBlank(message = "Name is required")
     @Size(max = 100)

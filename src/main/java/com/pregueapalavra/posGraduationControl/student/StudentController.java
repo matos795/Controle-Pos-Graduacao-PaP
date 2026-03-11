@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequestDTO;
+import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.dto.StudentResponse;
 import com.pregueapalavra.posGraduationControl.student.dto.UpdateStudentRequest;
 
@@ -29,7 +29,7 @@ public class StudentController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public StudentResponse createStudent(@Valid @RequestBody CreateStudentRequestDTO requestDTO) {
+    public StudentResponse createStudent(@Valid @RequestBody CreateStudentRequest requestDTO) {
         return studentService.createStudent(requestDTO);
     }
 

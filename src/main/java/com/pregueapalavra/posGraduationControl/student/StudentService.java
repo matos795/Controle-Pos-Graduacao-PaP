@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.pregueapalavra.posGraduationControl.exception.exceptions.DatabaseException;
 import com.pregueapalavra.posGraduationControl.exception.exceptions.ResourceNotFoundException;
 import com.pregueapalavra.posGraduationControl.exception.student.EmailAlreadyExistsException;
-import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequestDTO;
+import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.dto.StudentResponse;
 import com.pregueapalavra.posGraduationControl.student.dto.UpdateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.mapper.StudentMapper;
@@ -23,7 +23,7 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
 
-    public StudentResponse createStudent(CreateStudentRequestDTO requestDTO) {
+    public StudentResponse createStudent(CreateStudentRequest requestDTO) {
         if (studentRepository.existsByEmail(requestDTO.email())) {
             throw new EmailAlreadyExistsException("Email já está sendo usado!");
         }

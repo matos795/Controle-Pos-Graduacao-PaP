@@ -1,13 +1,13 @@
 package com.pregueapalavra.posGraduationControl.student.mapper;
 
 import com.pregueapalavra.posGraduationControl.student.StudentEntity;
-import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequestDTO;
+import com.pregueapalavra.posGraduationControl.student.dto.CreateStudentRequest;
 import com.pregueapalavra.posGraduationControl.student.dto.StudentResponse;
 import com.pregueapalavra.posGraduationControl.student.dto.UpdateStudentRequest;
 
 public class StudentMapper {
 
-    public static StudentEntity toCreatedEntity(CreateStudentRequestDTO requestDTO) {
+    public static StudentEntity toCreatedEntity(CreateStudentRequest requestDTO) {
         StudentEntity studentEntity = new StudentEntity();
         studentEntity.setName(requestDTO.name());
         studentEntity.setEmail(requestDTO.email());
